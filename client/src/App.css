@@ -1,0 +1,64 @@
+.App {
+  margin: 18px;
+}
+
+.location-selection {
+  margin-right: 120px;
+}
+
+.location-list {
+  margin: 25px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.location-result {
+  border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px -6px black;
+    display: flex;
+    width: 75%;
+}
+
+.location-detail {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-right: 25px;
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location {
+  text-align: left;
+}
+
+.input-form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.user-search {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.search-title {
+  text-align: left;
+}
+
+.search-input {
+  margin: 0 0 20px 0;
+}
+
+.search-button {
+  align-self: baseline;
+  background: blue;
+  color: white;
+  padding: 3px 12px;
+  border: none;
+}
