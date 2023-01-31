@@ -4,11 +4,12 @@ const LocationList = ({list, zeroResults}: ListProps) => {
   return (
     <ul className="location-list">
       {zeroResults && <h4>No Results Found</h4>}
-      {list.length > 0 && list.map((item) => (
-        <li key={item.place_id} className="location-result">
+      {list.map((item) => (
+        <li key={item.id} className="location-result">
           <span className='location-detail'>
             <span>{item.name}</span>
-            <span>{JSON.stringify(item.geometry.location)}</span>
+            {/* <span>{JSON.stringify(item.geometry.location)}</span> */}
+            <span>{item.address}</span>
           </span>
           <span>
             Rating - {item.rating ? item.rating : 'None yet'}
@@ -19,19 +20,15 @@ const LocationList = ({list, zeroResults}: ListProps) => {
   );
 }
 
-interface Geometry {
-  location: string
-}
-
-interface List {
-  place_id: number,
+interface ListResult {
+  id: number,
   name: string
   rating: number
-  geometry: Geometry
+  address: string
 }
 
 interface ListProps {
-  list: List[];
+  list: ListResult[];
   zeroResults: boolean
 }
 
